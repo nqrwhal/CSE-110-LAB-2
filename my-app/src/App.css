@@ -1,0 +1,207 @@
+.note-individual {
+  border: 1px solid black;
+  display: "flex";
+  flex-direction: column;
+}
+
+.app-container {
+  display: "flex";
+  flex-direction: column;
+}
+
+.note-form {
+  display: "flex";
+  flex-direction: column;
+  max-width: 500px;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+textarea,
+input {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  max-height: 200px;
+  overflow: auto;
+  box-sizing:  border-box;
+}
+
+.note-form button {
+  border-radius: 5px;
+  background-color: rgb(64, 154, 184);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  margin-top: 10px;
+
+}
+
+.note-form button:hover {
+  background-color: rgb(106, 175, 198);
+  cursor: pointer;
+}
+
+.favorite-notes {
+  margin-top: 20px;
+}
+
+.favorite-notes h3 {
+  margin-bottom: 10px;
+}
+
+.favorite-notes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.favorite-notes li {
+  margin-bottom: 5px;
+}
+
+.edit-buttons {
+
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.edit-buttons button {
+  flex: 1;
+}
+
+.edit-buttons button:last-of-type {
+  background-color: rgb(220, 89, 89);
+  color: white; 
+}
+
+body {
+  margin: 20px;
+  background-color: lightgrey;
+}
+
+.app-container {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+}
+
+.notes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.note-item.dark-mode {
+  background-color: #333333;
+  border: white;
+  color: white
+}
+
+.note-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+  box-sizing: border-box;
+}
+
+
+h2 {
+  margin: 0;
+}
+
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-button {
+  height: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-button {
+  height: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.icon-container {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+}
+
+
+input:focus,
+textarea:focus {
+  background-color: #e0f7fa;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.note-form.dark-mode,
+textarea.dark-mode,
+input.dark-mode,
+select.dark-mode,
+ {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+.note-header.dark-mode {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.note-form button.dark-mode {
+  background-color: #555555;
+  color: hsl(0, 0%, 100%);
+}
+
+
+
+.note-header button {
+  border: none; /* White border for buttons in the note headers */
+  background: none;
+  color: inherit;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.note-header button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+}
+
+.note-header button.dark-mode {
+  background: none; /* White background for edit buttons in dark mode */
+  color: white; /* Black text color for visibility */
+  border: none; /* Ensure border is white in dark mode */
+
+}
+
+.edit-button.dark-mode,
+.delete-button.dark-mode {
+  color: white;
+}
